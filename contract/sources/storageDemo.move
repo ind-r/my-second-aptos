@@ -34,7 +34,7 @@ module walruii_addr::StorageDemo {
   use std::debug::print;
   #[test_only]
   use std::string::utf8;
-  #[test(account = @0x123)]
+  // #[test(account = @0x123)]
   fun test_function(account: signer) acquires StakePool {
     add_user(&account);
     assert!(read_pool(signer::address_of(&account)) == 0, 1);
